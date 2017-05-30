@@ -1,0 +1,40 @@
+{
+    "name": "cmpayments/guzzle-psp-authentication-middleware",
+    "description": "Guzzle middleware which adds authentication-header to Guzzle-requests.",
+    "keywords": [
+        "oauth", "api", "psp", "guzzle"
+    ],
+    "homepage": "https://www.cmpayments.com",
+    "authors": [
+        {
+            "name": "Michel Westerink",
+            "email": "michel.westerink@cm.nl",
+            "homepage": "https://github.com/mwesterink"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/cmpayments/guzzle-psp-authentication-middleware/issues"
+    },
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7|>=5.0 <5.4",
+        "squizlabs/php_codesniffer": "^2.3",
+        "jakub-onderka/php-parallel-lint": "^0.9.0"
+    },
+    "type" : "library",
+    "autoload": {
+        "psr-4": {
+            "CMPayments\\GuzzlePSPAuthenticationMiddleware\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CMPayments\\GuzzlePSPAuthenticationMiddleware\\Test\\": "test/"
+        }
+    }
+}

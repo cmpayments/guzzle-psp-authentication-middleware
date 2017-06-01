@@ -5,6 +5,7 @@ Guzzle Authentication Middleware
 [![Scrutinizer][badge-quality]][quality]
 [![Software License][badge-license]][license]
 [![Total Downloads][badge-downloads]][downloads]
+[![Code Coverage][badge-coverage]][coverage]
 
 This middleware implements the authentication part of a guzzle request to the CM Payments PSP-api.
 
@@ -88,10 +89,12 @@ The cmpayment/guzzle-psp-authentication-middleware library is copyright © [CM P
 [badge-quality]: https://img.shields.io/scrutinizer/g/cmpayments/guzzle-psp-authentication-middleware.svg?style=flat-square
 [badge-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [badge-downloads]: https://img.shields.io/packagist/dt/cmpayments/guzzle-psp-authentication-middleware.svg?style=flat-square
+[badge-coverage]: https://scrutinizer-ci.com/g/cmpayments/guzzle-psp-authentication-middleware/badges/coverage.png?b=master
 
 [license]: https://github.com/cmpayments/guzzle-psp-authentication-middleware/blob/master/LICENSE
 [build]: https://travis-ci.org/cmpayments/guzzle-psp-authentication-middleware
 [quality]: https://scrutinizer-ci.com/g/cmpayments/guzzle-psp-authentication-middleware/
-[coverage]: https://coveralls.io/r/cmpayments/guzzle-psp-authentication-middleware?branch=master
+[coverage]: https://scrutinizer-ci.com/g/cmpayments/guzzle-psp-authentication-middleware/?branch=master
 [downloads]: https://packagist.org/packages/cmpayments/guzzle-psp-authentication-middleware
+
 

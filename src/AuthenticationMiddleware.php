@@ -1,4 +1,5 @@
 <?php
+
 namespace CMPayments\GuzzlePSPAuthenticationMiddleware;
 
 use Psr\Http\Message\RequestInterface;
@@ -33,8 +34,8 @@ class AuthenticationMiddleware
     /**
      * AuthenticationMiddleware constructor.
      *
-     * @param string $key
-     * @param string $secret
+     * @param string $key OAuth-Consumer-Key
+     * @param string $secret OAuth-Consumer-Secret
      */
     public function __construct($key, $secret)
     {
@@ -69,7 +70,7 @@ class AuthenticationMiddleware
     /**
      * This function is called by Guzzle in order to initiate the middleware.
      *
-     * @param callable $handler
+     * @param callable $handler Representation of an outgoing, client-side request.
      *
      * @return \Closure
      */
@@ -104,9 +105,9 @@ class AuthenticationMiddleware
      *
      * @param RequestInterface $request
      *
-     * @return array[string, string]
+     * @return array[string] The headers for the request
      */
-    private function createHeaders($request)
+    private function createHeaders(RequestInterface $request)
     {
         $data = [];
         $nonce = $this->nonceGenerator->generate();

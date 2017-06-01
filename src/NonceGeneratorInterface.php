@@ -1,4 +1,5 @@
 <?php
+
 namespace CMPayments\GuzzlePSPAuthenticationMiddleware;
 
 /**
@@ -11,7 +12,7 @@ interface NonceGeneratorInterface
     /**
      * Generate a Nonce
      *
-     * @return string
+     * @return string The nonce
      */
     public function generate();
 }

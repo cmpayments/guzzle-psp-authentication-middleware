@@ -17,7 +17,6 @@ use GuzzleHttp\Middleware;
  */
 class AuthenticationTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      *  Base uri
      */
@@ -64,9 +63,9 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
     private $container = [];
 
     /**
-     * @param bool $static
+     * @param bool $static Does it have to use the static generators or not.
      *
-     * @return AuthenticationMiddleware
+     * @return AuthenticationMiddleware The actual AuthenticationMiddleware
      */
     public function createAuth($static = false)
     {
@@ -158,9 +157,9 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
     /**
      * As for a GET and a POST, the initiation of the request is the same.
      *
-     * @param bool $static
+     * @param bool $static Does it have to use the static generators or not.
      *
-     * @return Client
+     * @return Client A Guzzle-client
      */
     private function createNewClient($static = false)
     {

@@ -1,4 +1,5 @@
 <?php
+
 namespace CMPayments\GuzzlePSPAuthenticationMiddleware;
 
 /**
@@ -11,7 +12,7 @@ interface TimestampGeneratorInterface
     /**
      * Generate a timestamp
      *
-     * @return integer
+     * @return integer A timestamp
      */
     public function generate();
 }

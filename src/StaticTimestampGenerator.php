@@ -8,7 +8,6 @@ namespace CMPayments\GuzzlePSPAuthenticationMiddleware;
  */
 class StaticTimestampGenerator implements TimestampGeneratorInterface
 {
-
     /**
      * @inheritdoc
      */

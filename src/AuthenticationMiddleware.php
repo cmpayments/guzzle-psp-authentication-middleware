@@ -46,6 +46,8 @@ class AuthenticationMiddleware
     }
 
     /**
+     * Overwrite the nonceGenerator-class. Used for the unit-test
+     *
      * @param NonceGeneratorInterface $nonceGenerator
      */
     public function setNonceGenerator($nonceGenerator)
@@ -54,6 +56,8 @@ class AuthenticationMiddleware
     }
 
     /**
+     * Overwrite the timestampGenerator-class. Used for the unit-test
+     *
      * @param TimestampGeneratorInterface $timestampGenerator
      */
     public function setTimestampGenerator($timestampGenerator)
@@ -63,6 +67,8 @@ class AuthenticationMiddleware
 
 
     /**
+     * This function is called by Guzzle in order to initiate the middleware.
+     *
      * @param callable $handler
      *
      * @return \Closure
@@ -77,6 +83,8 @@ class AuthenticationMiddleware
     }
 
     /**
+     * Before executing the request, add the extra headers
+     *
      * @param RequestInterface $request
      *
      * @return RequestInterface
@@ -92,9 +100,11 @@ class AuthenticationMiddleware
     }
 
     /**
+     * Calculate/determine the required headers for the request.
+     *
      * @param RequestInterface $request
      *
-     * @return array
+     * @return array[string, string]
      */
     private function createHeaders($request)
     {

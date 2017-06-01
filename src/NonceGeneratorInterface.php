@@ -9,7 +9,9 @@ namespace CMPayments\GuzzlePSPAuthenticationMiddleware;
 interface NonceGeneratorInterface
 {
     /**
-     * @inheritdoc
+     * Generate a Nonce
+     *
+     * @return string
      */
     public function generate();
 }

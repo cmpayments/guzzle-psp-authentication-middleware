@@ -9,9 +9,7 @@ namespace CMPayments\GuzzlePSPAuthenticationMiddleware;
 class RandomNonceGenerator implements NonceGeneratorInterface
 {
     /**
-     * Generate a Nonce
-     *
-     * @return string
+     * @inheritdoc
      */
     public function generate()
     {

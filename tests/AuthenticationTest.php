@@ -191,6 +191,7 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
      */
     public function testRandomNonce()
     {
+        /** @var string $nonce */
         $nonce = (new RandomNonceGenerator())->generate();
         $this->assertEquals(32, strlen($nonce));
     }
@@ -200,6 +201,7 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
      */
     public function testRandomTimestamp()
     {
+        /** @var int $timestamp */
         $timestamp = (new RandomTimestampGenerator())->generate();
         $this->assertInternalType("int", $timestamp);
     }

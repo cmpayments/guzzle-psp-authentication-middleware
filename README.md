@@ -82,7 +82,7 @@ Bugs and feature request are tracked on [GitHub](https://github.com/cmpayments/g
 
 ## Copyright and license
 
-The cmpayment/guzzle-psp-authentication-middleware library is copyright © [Michel Westerink](https://github.com/mwesterink/) and licensed for use under the MIT License (MIT). Please see [LICENSE][] for more information.
+The cmpayment/guzzle-psp-authentication-middleware library is copyright © [CM Payments](https://cmpayments.com/) and licensed for use under the MIT License (MIT). Please see [LICENSE][] for more information.
 
 [badge-build]: https://img.shields.io/travis/cmpayments/guzzle-psp-authentication-middleware.svg?style=flat-square
 [badge-quality]: https://img.shields.io/scrutinizer/g/cmpayments/guzzle-psp-authentication-middleware.svg?style=flat-square
@@ -94,3 +94,4 @@ The cmpayment/guzzle-psp-authentication-middleware library is copyright © [Mich
 [quality]: https://scrutinizer-ci.com/g/cmpayments/guzzle-psp-authentication-middleware/
 [coverage]: https://coveralls.io/r/cmpayments/guzzle-psp-authentication-middleware?branch=master
 [downloads]: https://packagist.org/packages/cmpayments/guzzle-psp-authentication-middleware
+

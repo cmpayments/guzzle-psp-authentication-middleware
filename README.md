@@ -8,7 +8,7 @@ Guzzle Authentication Middleware
 
 This middleware implements the authentication part of a guzzle request to the CM Payments PSP-api.
 
-This library is compatible with PHP 5.4+ and PHP 7.0, but requires the Guzzle, PHP HTTP client version ^6.0
+This library is compatible with PHP 5.5+ and PHP 7.0, but requires the Guzzle, PHP HTTP client version ^6.0
 
 ## Installation
 

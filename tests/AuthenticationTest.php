@@ -3,6 +3,8 @@
 namespace CMPayments\GuzzlePSPAuthenticationMiddleware\test;
 
 use CMPayments\GuzzlePSPAuthenticationMiddleware\AuthenticationMiddleware;
+use CMPayments\GuzzlePSPAuthenticationMiddleware\RandomNonceGenerator;
+use CMPayments\GuzzlePSPAuthenticationMiddleware\RandomTimestampGenerator;
 use CMPayments\GuzzlePSPAuthenticationMiddleware\StaticNonceGenerator;
 use CMPayments\GuzzlePSPAuthenticationMiddleware\StaticTimestampGenerator;
 use GuzzleHttp\Client;
@@ -182,5 +184,23 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
         $stack->push($historyMiddleware);
 
         return new Client(['base_uri' => self::BASEURI, 'handler' => $stack]);
+    }
+
+    /**
+     * Check if the random nance has a valid nonce
+     */
+    public function testRandomNonce()
+    {
+        $nonce = (new RandomNonceGenerator())->generate();
+        $this->assertEquals(32, strlen($nonce));
+    }
+
+    /**
+     * Test if the random timestamp is an integer
+     */
+    public function testRandomTimestamp()
+    {
+        $timestamp = (new RandomTimestampGenerator())->generate();
+        $this->assertInternalType("int", $timestamp);
     }
 }

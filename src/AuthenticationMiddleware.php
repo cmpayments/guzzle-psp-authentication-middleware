@@ -105,7 +105,7 @@ class AuthenticationMiddleware
      *
      * @param RequestInterface $request
      *
-     * @return array[string] The headers for the request
+     * @return array The headers for the request
      */
     private function createHeaders(RequestInterface $request)
     {

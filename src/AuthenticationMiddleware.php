@@ -141,7 +141,7 @@ class AuthenticationMiddleware
      *
      * @return array The data-array
      */
-    private function createDataElement(RequestInterface $request, string $nonce, int $timestamp)
+    private function createDataElement(RequestInterface $request, $nonce, $timestamp)
     {
         $data = [];
         if ($request->getMethod() === 'POST') {
@@ -165,7 +165,7 @@ class AuthenticationMiddleware
      *
      * @return array The headers for the request
      */
-    private function createOAuthHeaders(string $nonce, int $timestamp, string $hash)
+    private function createOAuthHeaders($nonce, $timestamp, $hash)
     {
         $oauth_header = [];
         $oauth_header[] = 'oauth_consumer_key="' . $this->key . '"';

@@ -36,7 +36,7 @@ class AuthenticationMiddleware
      * @param string $key
      * @param string $secret
      */
-    public function __construct(string $key, string $secret)
+    public function __construct($key, $secret)
     {
         $this->key = $key;
         $this->secret = $secret;
@@ -67,7 +67,7 @@ class AuthenticationMiddleware
      *
      * @return \Closure
      */
-    public function __invoke(callable $handler)
+    public function __invoke($handler)
     {
         return function ($request, array $options) use ($handler) {
             $request = $this->onBefore($request);
@@ -96,7 +96,7 @@ class AuthenticationMiddleware
      *
      * @return array
      */
-    private function createHeaders(RequestInterface $request)
+    private function createHeaders($request)
     {
         $data = [];
         $nonce = $this->nonceGenerator->generate();

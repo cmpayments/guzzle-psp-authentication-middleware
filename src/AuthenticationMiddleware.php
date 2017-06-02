@@ -139,7 +139,7 @@ class AuthenticationMiddleware
      * @param string           $nonce The none which is generated
      * @param int              $timestamp The timestamp which is generated
      *
-     * @return array The data-array
+     * @return string[] The data-array
      */
     private function createDataElement(RequestInterface $request, $nonce, $timestamp)
     {
@@ -163,7 +163,7 @@ class AuthenticationMiddleware
      * @param int    $timestamp The generated timestamp
      * @param string $hash The created hash
      *
-     * @return array The headers for the request
+     * @return string[] The headers for the request
      */
     private function createOAuthHeaders($nonce, $timestamp, $hash)
     {
